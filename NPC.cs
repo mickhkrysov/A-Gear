@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, IInteractable
 {
+    [Header("Dialogue Data")]
     public NPCDialogue dialogueData;
+
+    [Header("UI References")]
     public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText;
+    public TMP_Text dialogueText;
+    public TMP_Text nameText;
 
     private int dialogueIndex;
-    private bool isTyping, isDialogueActive;
+    private bool isTyping;
+    private bool isDialogueActive;
 
     public bool CanInteract()
     {
@@ -18,42 +23,52 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if(dialogueData == null || (PauseController.isGamePaused && !isDialogueActive))
-        return;
+        if (dialogueData == null) return;
 
-        if(isDialogueActive)
+        // If game is paused for other reasons, block starting a NEW dialogue.
+        // But allow progressing if THIS dialogue is already active.
+        if (PauseController.isGamePaused && !isDialogueActive) return;
+
+        if (isDialogueActive)
         {
             NextLine();
         }
         else
         {
-            //Start Dialogue
+            StartDialogue();
         }
     }
 
-    void StartDialogue()
+    private void StartDialogue()
     {
+        if (dialoguePanel == null || dialogueText == null || nameText == null) return;
+        if (dialogueData.dialogueLines == null || dialogueData.dialogueLines.Length == 0) return;
+
         isDialogueActive = true;
         dialogueIndex = 0;
 
-        nameText.SetText(dialogueData.name);
+        nameText.SetText(dialogueData.npcName);
         dialoguePanel.SetActive(true);
+
         PauseController.SetPause(true);
 
-        StartCoroutines(TypeLine());
+        StartCoroutine(TypeLine());
     }
 
-    void NextLine()
+    private void NextLine()
     {
         if (isTyping)
         {
             StopAllCoroutines();
             dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
+            return;
         }
-        else if(++dialogueIndex < dialogueData.dialogueLines.Lenght)
+
+        dialogueIndex++;
+
+        if (dialogueIndex < dialogueData.dialogueLines.Length)
         {
-            //if another line, type next line
             StartCoroutine(TypeLine());
         }
         else
@@ -62,32 +77,40 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    IEnumerator TypeLine()
+    private IEnumerator TypeLine()
     {
         isTyping = true;
         dialogueText.SetText("");
 
-        foreach(char letter in dialogueData.dialogueLines[dialogueIndex])
+        string line = dialogueData.dialogueLines[dialogueIndex];
+
+        foreach (char letter in line)
         {
-            dialogueText.text += letter; 
+            dialogueText.text += letter;
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
 
         isTyping = false;
 
-        if (dialogueData.autoProgressLines.Lenght > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
+        // Auto-progress if configured
+        if (dialogueData.autoProgressLines != null &&
+            dialogueData.autoProgressLines.Length > dialogueIndex &&
+            dialogueData.autoProgressLines[dialogueIndex])
         {
             yield return new WaitForSeconds(dialogueData.autoProgressDelay);
             NextLine();
         }
     }
-   
-   public void EndDialogue()
+
+    public void EndDialogue()
     {
         StopAllCoroutines();
         isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
+        isTyping = false;
+
+        if (dialogueText != null) dialogueText.SetText("");
+        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+
         PauseController.SetPause(false);
     }
 }
