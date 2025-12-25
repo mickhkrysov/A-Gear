@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
+
 public class NPC : MonoBehaviour, IInteractable
 {
     [Header("Dialogue Data")]
@@ -15,7 +16,12 @@ public class NPC : MonoBehaviour, IInteractable
     private int dialogueIndex;
     private bool isTyping;
     private bool isDialogueActive;
-
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 0.3f);
+    }
     public bool CanInteract()
     {
         return !isDialogueActive;

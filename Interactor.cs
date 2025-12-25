@@ -28,7 +28,7 @@ public class Interactor : MonoBehaviour
             interactLayerMask
         );
 
-        Debug.DrawRay(origin, direction * interactRange, Color.yellow, 0.3f);
+        Debug.DrawRay(origin, direction * interactRange, Color.yellow, 1.5f);
 
         if (!hit) return;
 
