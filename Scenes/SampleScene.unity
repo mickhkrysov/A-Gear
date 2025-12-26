@@ -4174,7 +4174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   interactSource: {fileID: 1164532488}
-  interactRange: 1
+  interactRange: 4
   interactLayerMask:
     serializedVersion: 2
     m_Bits: 64
