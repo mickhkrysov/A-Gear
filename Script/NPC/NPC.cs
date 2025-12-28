@@ -98,14 +98,6 @@ public class NPC : MonoBehaviour, IInteractable
 
         isTyping = false;
 
-        // Auto-progress if configured
-        if (dialogueData.autoProgressLines != null &&
-            dialogueData.autoProgressLines.Length > dialogueIndex &&
-            dialogueData.autoProgressLines[dialogueIndex])
-        {
-            yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-            NextLine();
-        }
     }
 
     public void EndDialogue()
