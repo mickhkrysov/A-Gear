@@ -23,7 +23,6 @@ public class MenuController : MonoBehaviour
 
     private void Update()
     {
-        // Change the key here if you want another one (e.g., Escape)
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleMenu();
@@ -37,7 +36,7 @@ public class MenuController : MonoBehaviour
         bool showMenu = !menuCanvas.activeSelf;
         menuCanvas.SetActive(showMenu);
 
-        // Tie into your PauseController so gameplay stops when menu is open
+        // Tie into PauseController so gameplay stops when menu is open
         PauseController.SetPause(showMenu);  // uses PauseController class 
     }
 }
