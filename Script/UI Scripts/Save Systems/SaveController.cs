@@ -4,7 +4,7 @@ using UnityEngine;
 public class SaveController : MonoBehaviour
 {
     private string saveLocation;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private InventoryController inventoryController;
     public GameObject savedTextObject;
     public GameObject resetTextError;   //shows if user wants to reset progress but he didn't save before
     public GameObject resetProgressSucsess;     //shows if progress been reseted
@@ -13,6 +13,7 @@ public class SaveController : MonoBehaviour
     {
         //define save location
         saveLocation = Path.Combine(Application.persistentDataPath, "SaveData.json");
+        inventoryController = FindFirstObjectByType<InventoryController>();
 
         LoadGame();
     }
@@ -22,7 +23,8 @@ public class SaveController : MonoBehaviour
     {
         SaveData saveData = new SaveData
         {
-            PlayerPosition = GameObject.FindGameObjectWithTag("Player").transform.position
+            PlayerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
+            inventorySaveData = inventoryController.GetInventoryItems()
         };
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
     }
@@ -35,6 +37,8 @@ public class SaveController : MonoBehaviour
             SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
 
             GameObject.FindGameObjectWithTag("Player").transform.position = saveData.PlayerPosition;
+
+            inventoryController.SetInventoryItems(saveData.inventorySaveData);
         }
         else
         {
