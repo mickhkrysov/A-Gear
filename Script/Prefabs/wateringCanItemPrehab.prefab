@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1917831692008262627}
   - component: {fileID: 7436483361129782512}
   - component: {fileID: 602173303385138966}
-  - component: {fileID: -6606177412925560652}
+  - component: {fileID: -6226987446833013668}
   m_Layer: 5
-  m_Name: Item
+  m_Name: wateringCanItemPrehab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1438552683215292887, guid: 47393ff93597543368bde6974f97bb92, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb5666fc54dc4c88bd8b32ad604beb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemDragHandler
---- !u!114 &-6606177412925560652
+--- !u!114 &-6226987446833013668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,5 +113,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcb41832967724da78ae3f6647d72d76, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  itemId: 0
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemId: 1

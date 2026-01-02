@@ -158,15 +158,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: menu_0
+      name: page1
       rect:
         serializedVersion: 2
-        x: 934
-        y: 1732
-        width: 415
-        height: 404
+        x: 2169
+        y: 1322
+        width: 1471
+        height: 1188
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -180,15 +180,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_1
+      name: ItemPlaceholder
       rect:
         serializedVersion: 2
-        x: 1258
-        y: 1669
-        width: 48
-        height: 62
+        x: 70
+        y: 1178
+        width: 245
+        height: 251
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,15 +202,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_2
+      name: Item
       rect:
         serializedVersion: 2
-        x: 1283
-        y: 1669
-        width: 84
-        height: 61
+        x: 95
+        y: 1443
+        width: 191
+        height: 170
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,7 +232,7 @@ TextureImporter:
         width: 546
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,7 +254,7 @@ TextureImporter:
         width: 549
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,7 +276,7 @@ TextureImporter:
         width: 547
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,15 +290,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_6
+      name: TaskTab
       rect:
         serializedVersion: 2
-        x: 871
-        y: 1362
-        width: 547
-        height: 24
+        x: 81
+        y: 1021
+        width: 271
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -312,15 +312,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_7
+      name: page_3
       rect:
         serializedVersion: 2
-        x: 1449
-        y: 1265
-        width: 473
-        height: 177
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2172
+        y: 45
+        width: 1473
+        height: 1190
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45959887}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,15 +334,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_8
+      name: keyItem
       rect:
         serializedVersion: 2
-        x: 869
-        y: 1275
-        width: 548
-        height: 22
+        x: 352
+        y: 1258
+        width: 173
+        height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,7 +356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_9
+      name: ScissorsItem
       rect:
         serializedVersion: 2
         x: 25
@@ -364,7 +364,7 @@ TextureImporter:
         width: 147
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -378,15 +378,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_10
+      name: GearItem
       rect:
         serializedVersion: 2
-        x: 100
-        y: 624
-        width: 184
-        height: 191
+        x: 148
+        y: 664
+        width: 189
+        height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,7 +400,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_11
+      name: page_2
       rect:
         serializedVersion: 2
         x: 376
@@ -408,7 +408,7 @@ TextureImporter:
         width: 1492
         height: 1204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_12
+      name: SettingsTab
       rect:
         serializedVersion: 2
         x: 79
@@ -430,7 +430,7 @@ TextureImporter:
         width: 272
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -444,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_13
+      name: saveTab
       rect:
         serializedVersion: 2
         x: 77
@@ -452,7 +452,7 @@ TextureImporter:
         width: 272
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -466,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_14
+      name: inventoryTab
       rect:
         serializedVersion: 2
         x: 77
@@ -474,7 +474,7 @@ TextureImporter:
         width: 272
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -488,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: menu_15
+      name: cancelButton
       rect:
         serializedVersion: 2
         x: 122
@@ -496,7 +496,7 @@ TextureImporter:
         width: 105
         height: 106
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -509,11 +509,209 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: button_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1717
+        width: 561
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1294b390224944a8a59296e501d4743
+      internalID: 1401240986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1968
+        width: 562
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713a4427c14774e84a2eaa09d59b047b
+      internalID: 1390324350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_17
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 1706
+        width: 478
+        height: 457
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171649bcad5f94307b5b38884d837eb0
+      internalID: -366561336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_18
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 1712
+        width: 122
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74a44eb502f2406eaaca1f9693b10a4
+      internalID: -10292535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_19
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1990
+        width: 106
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e571d8264b7c24851a43b7bcd4905204
+      internalID: -2142351966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_20
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1879
+        width: 137
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9031bd7a3f5944318af0df2f58c3753e
+      internalID: 695207211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_21
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 1892
+        width: 360
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78643c1be8e4942a9856fd667c15c10f
+      internalID: 1533114687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_22
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1630
+        width: 359
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a61cea42e534013a4ce32b209ac6e4
+      internalID: -324075018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu_23
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1602
+        width: 108
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a786677c1704663b4f21c5be09611b
+      internalID: 872935949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f5323e050fc9847e78945fd187cb7d01
     internalID: 0
     vertices: []
     indices: 
@@ -523,22 +721,31 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      menu_0: 7042847911465117151
-      menu_1: 6984307464289580096
-      menu_10: -3886808462891912307
-      menu_11: -47240829442599701
-      menu_12: 4721285743906693435
-      menu_13: 1482890853020844372
-      menu_14: -7461470061115142549
-      menu_15: 8915924988816748166
-      menu_2: -1438552683215292887
+      GearItem: -3886808462891912307
+      Item: -1438552683215292887
+      ItemPlaceholder: 6984307464289580096
+      ScissorsItem: -4699979498016537088
+      SettingsTab: 4721285743906693435
+      TaskTab: 4084048905539402606
+      button_1: 1401240986
+      button_2: 1390324350
+      cancelButton: 8915924988816748166
+      inventoryTab: -7461470061115142549
+      keyItem: -9165651224512837512
+      menu_17: -366561336
+      menu_18: -10292535
+      menu_19: -2142351966
+      menu_20: 695207211
+      menu_21: 1533114687
+      menu_22: -324075018
+      menu_23: 872935949
       menu_3: 7903818253674975445
       menu_4: 2167916245709258091
       menu_5: 8621727979372404038
-      menu_6: 4084048905539402606
-      menu_7: -3264436395472436212
-      menu_8: -9165651224512837512
-      menu_9: -4699979498016537088
+      page1: 7042847911465117151
+      page_2: -47240829442599701
+      page_3: -3264436395472436212
+      saveTab: 1482890853020844372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
