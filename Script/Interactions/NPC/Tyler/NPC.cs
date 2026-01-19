@@ -6,11 +6,37 @@ using System.Collections;
 public class NPC : MonoBehaviour, IInteractable
 {
     public NPCDialogue dialogueData;
-    public GameObject dialogueUI;
+    public GameObject dialogueUI;   //dialogue UI panel
     public TMP_Text dialogueText, nameText;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
+
+    void Update()
+    {
+        if (isDialogueActive && !isTyping)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                NextLine();
+            }
+        }
+
+        if (isDialogueActive && isTyping)
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SkipTyping();
+        }
+}
+    }
+
+    void SkipTyping()
+    {
+        StopAllCoroutines();
+        dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+        isTyping = false;
+    }
 
     public bool CanInteract()
     {
@@ -54,12 +80,12 @@ public class NPC : MonoBehaviour, IInteractable
             isTyping = false;
             
         }
-        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
+        else if (dialogueIndex + 1 < dialogueData.dialogueLines.Length)
         {
-            
+            dialogueIndex++;
             StartCoroutine(TypeLine());
-            ++dialogueIndex;
         }
+        
         else
         {
             EndDialogue();
@@ -70,14 +96,18 @@ public class NPC : MonoBehaviour, IInteractable
     {
         isTyping = true;
         dialogueText.SetText("");
+
         foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
-        isTyping = false;
 
+        isTyping = false;
     }
+    
+
+
 
     public void EndDialogue()
     {

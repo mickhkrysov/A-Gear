@@ -86,32 +86,26 @@ public class SaveController : MonoBehaviour
         }
     }
 
-
-    //shows that progress is saved
-    public void ShowTextButton()
+    public void ToggleSaveState()
+{
+    switch (File.Exists(saveLocation))
     {
-        savedTextObject.SetActive(true);
-        resetTextError.SetActive(false);
-        resetProgressSucsess.SetActive(false);
-    }
-
-    //resets the saved data
-    public void ResetSavedData()
-    {
-        if (File.Exists(saveLocation))          //check later if i can do switch
-        {
+        case true:
+            // Reset save
             File.Delete(saveLocation);
             resetProgressSucsess.SetActive(true);
             resetTextError.SetActive(false);
             savedTextObject.SetActive(false);
-        }
+            break;
 
-        else
-        {
-            resetTextError.SetActive(true);
+        case false:
+            // Show save text
+            savedTextObject.SetActive(true);
+            resetTextError.SetActive(false);
             resetProgressSucsess.SetActive(false);
-            savedTextObject.SetActive(false);
-        }
+            break;
     }
+}
+
 
 }

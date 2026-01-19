@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Tyler
   dialogueLines:
-  - Hiiiiiiiiiiiiiiiiiiiii
+  - Hiiiiiiiiiiiiiiiiiiiii, how are you
   - This is a test dialogue
   - If you see it, you are gay
-  typingSpeed: 1
+  typingSpeed: 0
+  autoProgressLines: 010100
