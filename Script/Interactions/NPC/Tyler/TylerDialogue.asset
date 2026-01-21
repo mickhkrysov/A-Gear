@@ -14,8 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Tyler
   dialogueLines:
-  - Hiiiiiiiiiiiiiiiiiiiii, how are you
-  - This is a test dialogue
-  - If you see it, you are gay
+  - 'Hey, this is a test '
+  - Can you find scissors for me?
+  - Thanks.
+  - You sure?
   typingSpeed: 0
   autoProgressLines: 010100
+  endDialogueLines: 00000100
+  dialogueChoices:
+  - dialogueIndex: 1
+    choice:
+    - Sure
+    - Nuh
+    nextDialogueIndexes: 0200000003000000
+  - dialogueIndex: 3
+    choice:
+    - Sure
+    nextDialogueIndexes: 02000000

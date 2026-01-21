@@ -9,10 +9,21 @@ public class NPCDialogue : ScriptableObject
     public string[] dialogueLines;
 
     [Header("Typing Settings")]
-    public float typingSpeed = 0.01f;
+    public float typingSpeed = 10f;
 
     [Header("Auto Progress Settings")]
-    // NOTE: name matches what NPC.cs expects
     public bool[] autoProgressLines;
+    public bool[] endDialogueLines;     //where dialogue ends
 
+    public DialogueChoice[] dialogueChoices;
+
+}
+
+[System.Serializable]
+
+public class DialogueChoice
+{
+    public int dialogueIndex;
+    public string[] choice;
+    public int[] nextDialogueIndexes;
 }
