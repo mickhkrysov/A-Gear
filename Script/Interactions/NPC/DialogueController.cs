@@ -7,35 +7,27 @@ using UnityEngine.UI;
 //controller so all files don't have to manage dialogue UI separately
 public class DialogueController : MonoBehaviour
 {
-    public static DialogueController Instance{get; private set;}
-    
-    public GameObject dialogueUI;
+    public static DialogueController Instance {get; private set;}
+
+    public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
-    public Transform ChoicePanel;
+    public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        if(Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if(Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     public void ShowDialogueUI(bool show)
     {
-        dialogueUI.SetActive(show);
+        dialoguePanel.SetActive(show);
     }
 
-    public void SetNPCInfo(string npcName)
+    public void SetNpcInfo(string npcName)
     {
-        nameText.SetText(npcName);
+        nameText.text = npcName;
     }
 
     public void SetDialogueText(string text)
@@ -45,14 +37,17 @@ public class DialogueController : MonoBehaviour
 
     public void ClearChoices()
     {
-        foreach(Transform child in ChoicePanel) Destroy(child.gameObject);
+        foreach(Transform child in choiceContainer) Destroy(child.gameObject);
     }
 
-    public GameObject CreateChoiceButton(string ChoiceText, UnityEngine.Events.UnityAction onClick)
+    public GameObject CreateChoiceButton(string choiceText, UnityEngine.Events.UnityAction onClick)
     {
-        GameObject choiceButton = Instantiate(choiceButtonPrefab, ChoicePanel);
-        choiceButton.GetComponentInChildren<TMP_Text>().text = ChoiceText;
+        GameObject choiceButton = Instantiate(choiceButtonPrefab, choiceContainer);
+        choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
         choiceButton.GetComponent<Button>().onClick.AddListener(onClick);
         return choiceButton;
+
     }
+
+
 }

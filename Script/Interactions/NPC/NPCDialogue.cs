@@ -23,7 +23,8 @@ public class NPCDialogue : ScriptableObject
 
 public class DialogueChoice
 {
-    public int dialogueIndex;
-    public string[] choice;
     public int[] nextDialogueIndexes;
+    public int dialogueIndex;
+    public string[] choices;
+
 }
